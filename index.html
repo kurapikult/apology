@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>I'm Sorry! 🐧</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f0f8ff;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            color: #2a52be;
+        }
+        .penguin {
+            font-size: 60px;
+            margin: 20px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #yes {
+            background: #4CAF50;
+            color: white;
+        }
+        #no {
+            background: #f44336;
+            color: white;
+        }
+        .message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #d63447;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will You Forgive Me? 🐧</h1>
+    <div class="penguin">🐧</div>
+    <p>I messed up, and I'm truly sorry. Can we waddle past this together?</p>
+    
+    <div class="buttons">
+        <button id="yes">Yes, I forgive you!</button>
+        <button id="no">Not yet...</button>
+    </div>
+    
+    <div id="forgiven" class="message">
+        Yay! Thank you! 🎉🐧 <br> 
+        (I promise to be better!)
+    </div>
+    <div id="notyet" class="message">
+        Aww, I understand. 🥺 <br>
+        (I'll keep trying!)
+    </div>
+
+    <script>
+        document.getElementById("yes").onclick = function() {
+            document.getElementById("forgiven").style.display = "block";
+            document.getElementById("notyet").style.display = "none";
+        };
+        document.getElementById("no").onclick = function() {
+            document.getElementById("notyet").style.display = "block";
+            document.getElementById("forgiven").style.display = "none";
+        };
+    </script>
+</body>
+</html>
